@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Masajes Relax</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .service {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            flex: 1 1 calc(300px - 1rem);
+            max-width: 300px;
+        }
+        .service img {
+            width: 100%;
+            height: auto;
+        }
+        .service h3 {
+            margin: 0;
+            padding: 1rem 0;
+            background: #4CAF50;
+            color: white;
+        }
+        .service p {
+            padding: 0 1rem 1rem;
+            color: #333;
+        }
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .whatsapp:hover {
+            background: #1EBE57;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.2rem;
+            }
+            .service {
+                flex: 1 1 calc(100% - 1rem);
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Centro de Masajes Relax</h1>
+        <p>Relájate y renueva tu energía con nuestros servicios</p>
+    </header>
+
+    <div class="container">
+        <section class="services">
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200" alt="Masaje Relajante">
+                <h3>Masaje Relajante</h3>
+                <p>Disfruta de un momento de paz con nuestro masaje relajante.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200" alt="Masaje Terapéutico">
+                <h3>Masaje Terapéutico</h3>
+                <p>Alivia tensiones musculares con este tratamiento.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200" alt="Masaje Deportivo">
+                <h3>Masaje Deportivo</h3>
+                <p>Ideal para deportistas y recuperación muscular.</p>
+            </div>
+        </section>
+    </div>
+
+    <a href="https://wa.me/+554196552906" class="whatsapp" target="_blank">
+        &#x1F4AC;
+    </a>
+</body>
+</html> -->
