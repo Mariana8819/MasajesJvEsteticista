@@ -119,21 +119,44 @@ var swiper = new Swiper(".home-slider", {
 //       },
 //   });
 
-// //func para mostarr detalle de los masajes al hacer click en Leer Mas
-// function mostrarServicio(titulo, descripcion) {
-//     document.getElementById('descripcion-masaje').innerText = descripcion;
+// // //func para mostarr detalle de los masajes al hacer click en Leer Mas
+// // function mostrarServicio(titulo, descripcion) {
+// //     document.getElementById('descripcion-masaje').innerText = descripcion;
+// // }
+
+// //func para manejar el envio del formulario
+// function enviarFormulario(event) {
+//     event.preventDefault();
+
+//     //obtengo los valores del form
+//     var nombre= document.getElementById('nombre').value;
+//     var correo= document.getElementById('correo').value;
+//     var telefono= document.getElementById('telefono').value;
+
+//     document.getElementById('mensaje-confirmacion').innerText = `Gracias, ${nombre}! Tu inscripción ha sido recibida. Te contactaremos a tu correo (${correo}) o teléfono (${telefono}).`;
+
+//     document.getElementById('formulario-inscripcion').reset();
 // }
 
-//func para manejar el envio del formulario
-function enviarFormulario(event) {
-    event.preventDefault();
+//enviar form-inscripcion por whatsApp
 
-    //obtengo los valores del form
-    var nombre= document.getElementById('nombre').value;
-    var correo= document.getElementById('correo').value;
-    var telefono= document.getElementById('telefono').value;
+function enviarWhatsApp() {
+    // Obtener los valores del formulario
+    var nombre = document.getElementById('nombre').value;
+    var masaje = document.getElementById('masaje').value;
+    var correo = document.getElementById('correo').value;
+    var telefono = document.getElementById('telefono').value;
 
-    document.getElementById('mensaje-confirmacion').innerText = `Gracias, ${nombre}! Tu inscripción ha sido recibida. Te contactaremos a tu correo (${correo}) o teléfono (${telefono}).`;
+    // Crear el mensaje que se enviará por WhatsApp
+   // var mensaje = `Nombre: ${nombre}\nMasaje: ${masaje}\nCorreo: ${correo}\nTeléfono: ${telefono}`;
+    var mensaje = `¡Hola! Mi nombre es ${nombre} y estoy interesad@ en inscribirme para el masaje de ${masaje}. 
+    Mi correo es ${correo} y mi número de teléfono es ${telefono}. 
+    ¿Podrías brindarme más información? ¡Gracias!`;
 
-    document.getElementById('formulario-inscripcion').reset();
+    // Crear el enlace de WhatsApp
+    var numeroWhatsApp = '554196552906';  // Número de WhatsApp donde se enviará el mensaje
+    var enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+    // Redirigir al enlace de WhatsApp
+    window.open(enlaceWhatsApp, '_blank');
 }
