@@ -139,24 +139,35 @@ var swiper = new Swiper(".home-slider", {
 // }
 
 //enviar form-inscripcion por whatsApp
-
 function enviarWhatsApp() {
     // Obtener los valores del formulario
-    var nombre = document.getElementById('nombre').value;
-    var masaje = document.getElementById('masaje').value;
-    var correo = document.getElementById('correo').value;
-    var telefono = document.getElementById('telefono').value;
+    var nombre = document.getElementById('nombre').value.trim();
+    var masaje = document.getElementById('masaje').value.trim();
+    var correo = document.getElementById('correo').value.trim();
+    var telefono = document.getElementById('telefono').value.trim();
 
-    // Crear el mensaje que se enviará por WhatsApp
-   // var mensaje = `Nombre: ${nombre}\nMasaje: ${masaje}\nCorreo: ${correo}\nTeléfono: ${telefono}`;
-    var mensaje = `¡Hola! Mi nombre es ${nombre} y estoy interesad@ en inscribirme para el masaje de ${masaje}. 
-    Mi correo es ${correo} y mi número de teléfono es ${telefono}. 
-    ¿Podrías brindarme más información? ¡Gracias!`;
+    // Validar que todos los campos estén completos
+    if (!nombre || !masaje || !correo || !telefono) {
+        alert("Por favor complete todos los campos del formulario");
+        return;
+    }
+
+    // Crear el mensaje con saltos de línea codificados como %0A
+    var mensaje = 
+        "¡Hola! Mi nombre es " + nombre + " y estoy interesad@ en inscribirme para el masaje de " + masaje + ".%0A" +
+        "Mi correo es " + correo + " y mi número de teléfono es " + telefono + ".%0A" +
+        "¿Podrías brindarme más información? ¡Gracias!";
 
     // Crear el enlace de WhatsApp
-    var numeroWhatsApp = '554196552906';  // Número de WhatsApp donde se enviará el mensaje
-    var enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    var numeroWhatsApp = '5491145282951';
+    var url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}`;
 
-    // Redirigir al enlace de WhatsApp
-    window.open(enlaceWhatsApp, '_blank');
+    // Crear enlace temporal y simular clic
+    var a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 }
