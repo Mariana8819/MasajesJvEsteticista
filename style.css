@@ -416,6 +416,31 @@ section{
     object-fit: cover;
 }
 
+/* Estilos para las categorías */
+.category-section {
+    margin-bottom: 5rem;
+}
+
+.category-heading {
+    font-size: 3rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.category-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 0.3rem;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+}
+
 .professional .professional-slider{
     padding-bottom: 4rem;
 }
